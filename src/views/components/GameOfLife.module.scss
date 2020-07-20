@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.boardInput {
+  margin: 1em;
+}
+
+.board {
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin: 1em auto;
+}
+
+.cell {
+  border: solid 1px gray;
+  background-color: white;
+}
+
+input[type='checkbox'] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  display: block;
+  transition: 0.5s;
+  cursor: pointer;
+
+  &:checked {
+    background-color: black;
+  }
+}
