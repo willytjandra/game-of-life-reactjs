@@ -1,0 +1,14 @@
+cell {
+  input[type='checkbox'] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    display: block;
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:checked {
+      background-color: black;
+    }
+  }
+}

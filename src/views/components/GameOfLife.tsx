@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './GameOfLife.module.scss';
+import { Cell } from './Cell';
 
 type GameOfLifeState = {
   cells: Array<Array<boolean>>;
@@ -103,11 +104,7 @@ export class GameOfLife extends React.Component<{}, GameOfLifeState> {
                 <tr key={y}>
                   {value.map((checked, x) => (
                     <td className={styles.cell} key={x}>
-                      <input
-                        type="checkbox"
-                        checked={checked}
-                        onChange={() => this.handleCellClicked(y, x)}
-                      />
+                      <Cell isAlive={checked} onChange={() => this.handleCellClicked(y, x)} />
                     </td>
                   ))}
                 </tr>
